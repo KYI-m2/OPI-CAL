@@ -18,7 +18,7 @@ with st.sidebar :
   )
   choose = option_menu(
     "OPI-CAL",
-    ["Home","Introduction"],
+    ["Home","Introduction", "How to use", "Reference"],
     icons = ["book","envelope"]
   )
 
@@ -153,6 +153,15 @@ if choose == "Introduction" :
   st.markdown("ด.ญ. นพภัสสร ลิขิตธีรวุฒิ ม.3/3 เลขที่ 28")
 
 
+if choose == "How to use" :  
+  st.image("1.jpg")
+  st.image("2.jpg")
+  st.image("3.jpg")
+  st.image("4.jpg")
+  st.image("5.jpg")
+  st.image("6.jpg")
+if choose == "Reference" :
+  st.image("ref.jpg")
 
 
 
