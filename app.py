@@ -44,7 +44,7 @@ if choose == "Home" :
   
 
   time.sleep(5)
-  progress_text = "Connecting in progress. Please wait."
+  progress_text = "Loading in progress. Please wait."
   my_bar = st.progress(0, text=progress_text)
 
   for percent_complete in range(100):
@@ -56,9 +56,11 @@ if choose == "Home" :
   option_map = {
     0: "Morphine",
     1: "Fentanyl",
+    2: "วิธีการเจือจางยา",
+    3: "การติดตามความปลอดภัยเเละยาต้านพิษ"
   }
   selection = st.pills(
-    "Select Medicine",
+    "Selection",
     options=option_map.keys(),
     format_func=lambda option: option_map[option],
     selection_mode="single",
@@ -82,12 +84,16 @@ if choose == "Home" :
         dose = number2 * number3 / number1
         max = 0.5 * number1 / number2
         st.write("ขนาดยา : ", dose , "mg/kg/hr" )
+        if dose > 5 :
+          st.markdown(
+            ":red-badge[⚠️ ขนาดยาเกินกำหนดควรปรึกษาแพทย์]"
+          )
         st.write("อัตราเร็วบริหารยาสูงสุด : ", max , "ml/hr")
         st.write("ยาที่ต้องจ่ายต่อวัน : ", number2 * number3*24 / 10 , "10mg/ampule")
         
   elif selection == 1 :
     with st.form("my_form"):
-      st.write("Morphine Calculator")
+      st.write("Fentanyl Calculator")
       number4 = st.number_input(
           "กรอกน้ำหนัก (kg)", value=None, placeholder="..."
       )
@@ -104,6 +110,18 @@ if choose == "Home" :
         dose = number5 * number6 / number4
         max = 10 * number4 / number5
         st.write("ขนาดยา : ", dose , "mg/kg/hr" )
+        if dose > 5 :
+          st.markdown(
+            ":red-badge[⚠️ ขนาดยาเกินกำหนดควรปรึกษาแพทย์]"
+          )
         st.write("อัตราเร็วบริหารยาสูงสุด : ", max , "ml/hr")
         st.write("ยาที่ต้องจ่ายต่อวัน : ", number5 * number6*24 / 500 , "500 mcg/ampule")
         st.write("ยาที่ต้องจ่ายต่อวัน : ", number5 * number6*24 / 100 , "100 mcg/ampule")
+  if selection == 2:
+    if st.button("Morphine"):
+       st.image("IMG_1143.jpeg")
+    if st.button("Fentanyl"):
+       st.image("IMG_1144 (2).jpeg")
+    st.write("กดเพื่อดูข้อมูล")
+  if selection ==3 :
+      st.image("r.jpeg")
