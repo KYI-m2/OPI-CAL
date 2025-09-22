@@ -125,6 +125,34 @@ if choose == "Home" :
     st.write("กดเพื่อดูข้อมูล")
   if selection ==3 :
       st.image("r.jpeg")
+if choose == "Introduction" :
+  st.header("แนะนำสมาชิก")
+  st.divider()
+  
+  st.image("aoon.jpg", width=200)
+  st.markdown("ด.ญ. กานต์ปภา ประจิตร ม.3/3 เลขที่ 21 (หัวหน้ากลุ่ม)")
+  
+  st.divider()
+  
+  st.image("arm.jpg", width=200)
+  st.markdown("ด.ช. พีรณัฐ ธนฤกษ์ ม.3/3 เลขที่ 17")
+  
+  st.divider()
+  
+  st.image("peem.jpg", width=200)
+  st.markdown("ด.ญ. ชนันธร มามีชัย ม.3/3 เลขที่ 23")
+  
+  st.divider()
+  
+  st.image("miu.jpg", width=200)
+  st.markdown("ด.ญ. ฐิตามร กณิกนันต์ ม.3/3 เลขที่ 24")
+  
+  st.divider()
+  
+  st.image("parn.jpg", width=200)
+  st.markdown("ด.ญ. นพภัสสร ลิขิตธีรวุฒิ ม.3/3 เลขที่ 28")
+
+
 
 
 
