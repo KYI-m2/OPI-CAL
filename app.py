@@ -92,7 +92,7 @@ if choose == "Home" :
             ":red-badge[⚠️ ขนาดยาเกินกำหนดควรปรึกษาแพทย์]"
           )
         st.write("อัตราเร็วการบริหารยาสูงสุด : ", max , "ml/hr")
-        st.write("ยาที่ต้องจ่ายต่อวัน (10mg/ampule) : ", number2 * number3*24 / 10 , "ampule")
+        st.write("ปริมาณยาที่ต้องจ่ายต่อวัน (10mg/ampule) : ", number2 * number3*24 / 10 , "ampule")
         
   elif selection == 1 :
     with st.form("my_form"):
@@ -172,6 +172,7 @@ if choose == "How to use" :
 
 if choose == "Reference" :
   st.image("ref.jpeg")
+
 
 
 
