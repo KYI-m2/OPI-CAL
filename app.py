@@ -68,14 +68,17 @@ if choose == "Home" :
   if selection == 0:
     with st.form("my_form"):
       st.write("Morphine Calculator")
+      st.write("ขนาดยาสำหรับระงับปวดในผู้ป่วยที่ใช้เครื่องช่วยหายใจ (Jacobi et al., 2002)
+Intermittent dosage 0.01 to 0.15 mg/kg IV every 1 to 2 hours
+Continuous infusion 0.07 to 0.5 mg/kg/hr IV")
       number1 = st.number_input(
-          "กรอกน้ำหนัก (kg)", value=None, placeholder="..."
+          "กรอกน้ำหนักผู้ป่วย (kg)", value=None, placeholder="..."
       )
       number2 = st.number_input(
-          "กรอกความเข้มข้น (mg/ml)", value=None, placeholder="..."
+          "กรอกความเข้มข้นของยา (mg/ml)", value=None, placeholder="..."
       )
       number3 = st.number_input(
-          "กรอกอัตราเร็วการบริหารยา (ml/hr)", value=None, placeholder="..."
+          "กรอกอัตราเร็วการบริหารยาที่เเพทย์สั่ง (ml/hr)", value=None, placeholder="..."
       )
       
     
@@ -94,14 +97,17 @@ if choose == "Home" :
   elif selection == 1 :
     with st.form("my_form"):
       st.write("Fentanyl Calculator")
+      st.write("ขนาดยาสำหรับระงับปวดในผู้ป่วยที่ใช้เครื่องช่วยหายใจ (Barr et al., 2013)
+  ขนาดยา: Intermittent dosage 0.35 to 0.5 mcg/kg IV every 0.5 to 1 hour
+          Continuous infusion 0.7 to 10 mcg/kg/hr IV")
       number4 = st.number_input(
-          "กรอกน้ำหนัก (kg)", value=None, placeholder="..."
+          "กรอกน้ำหนักผู้ป่วย (kg)", value=None, placeholder="..."
       )
       number5 = st.number_input(
-          "กรอกความเข้มข้น (mcg/mg)", value=None, placeholder="..."
+          "กรอกความเข้มข้นของยา (mcg/mg)", value=None, placeholder="..."
       )
       number6 = st.number_input(
-          "กรอกอัตราเร็วการบริหารยา (ml/hr)", value=None, placeholder="..."
+          "กรอกอัตราเร็วการบริหารยาที่เเพทย์สั่ง (ml/hr)", value=None, placeholder="..."
       )
 
 
@@ -115,8 +121,9 @@ if choose == "Home" :
             ":red-badge[⚠️ ขนาดยาเกินกำหนดควรปรึกษาแพทย์]"
           )
         st.write("อัตราเร็วการบริหารยาสูงสุด : ", max , "ml/hr")
-        st.write("ยาที่ต้องจ่ายต่อวัน : ", number5 * number6*24 / 500 , "500 mcg/ampule")
-        st.write("ยาที่ต้องจ่ายต่อวัน : ", number5 * number6*24 / 100 , "100 mcg/ampule")
+        st.write("ปริมาณยาที่ต้องจ่ายต่อวัน  (500 mcg/ampule) : ", number5 * number6*24 / 500,"amplue" )
+        st.write("หรือ")
+        st.write("ปริมาณยาที่ต้องจ่ายต่อวัน (100 mcg/ampule): ", number5 * number6*24 / 100 ,"ampule")
   if selection == 2:
     if st.button("Morphine"):
        st.image("IMG_1143.jpeg")
@@ -126,9 +133,11 @@ if choose == "Home" :
   if selection ==3 :
       st.image("r.jpeg")
 if choose == "Introduction" :
-  st.header("แนะนำสมาชิก")
+  st.title("วัตถุประสงค์ของเว็บเเอปพลิเคชัน")
+  st.header("เว็บเเอปพลิเคชันนี้จัดทำขึ้นเพื่อใช้คำนวณขนาดยากลุ่ม Opioid สำหรับระงับปวดในผู้ป่วยที่ใช้เครื่องช่วยหายใจ ซึ่งจะช่วยลดขั้นตอนในการคำนวณขนาดยาที่ผู้ป่วยได้รับ อัตราเร็วสูงสุดในการบริหารยา จำนวนยาที่ต้องจ่ายต่อวัน รวมถึงสามารถให้ข้อมูลวิธีการเจือจางยา สำหรับให้ทางหลอดเลือดดำ และการติดตามความปลอดภัยของยากลุ่ม Opioid")
+  st.subheader("โดยข้อมูลทั้งหมดนี้ ได้รับการตรวจสอบความถูกต้องจาก งานติดตามอาการไม่พึงประสงค์จากยาเเละเภสัชนเทศ รพ.นพรัตนราชธานี")
   st.divider()
-  
+  st.header("แนะนำสมาชิก")
   st.image("aoon.jpg", width=200)
   st.markdown("ด.ญ. กานต์ปภา ประจิตร ม.3/3 เลขที่ 21 (หัวหน้ากลุ่ม)")
   
@@ -162,6 +171,7 @@ if choose == "How to use" :
 
 if choose == "Reference" :
   st.image("ref.jpeg")
+
 
 
 
