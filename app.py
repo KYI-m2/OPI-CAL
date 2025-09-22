@@ -149,7 +149,7 @@ if choose == "Introduction" :
   
   st.divider()
   
-  st.image("peem.jpg", width=200)
+  st.image("Peem3.jpeg", width=200)
   st.markdown("ด.ญ. ชนันธร มามีชัย ม.3/3 เลขที่ 23")
   
   st.divider()
@@ -172,6 +172,7 @@ if choose == "How to use" :
 
 if choose == "Reference" :
   st.image("ref.jpeg")
+
 
 
 
