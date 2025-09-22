@@ -159,9 +159,10 @@ if choose == "How to use" :
   st.image("3.jpg")
   st.image("4.jpg")
   st.image("5.jpg")
-  st.image("6.jpg")
+
 if choose == "Reference" :
-  st.image("ref.jpg")
+  st.image("ref.jpeg")
+
 
 
 
