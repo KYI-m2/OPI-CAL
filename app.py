@@ -13,7 +13,7 @@ from streamlit_lottie import st_lottie
 
 with st.sidebar :
   st.logo(
-  "logo2.png", # Replace with your logo URL or file path
+  "Add a heading.png", # Replace with your logo URL or file path
   size="large", # Options: "small", "medium", "large"
   )
   choose = option_menu(
@@ -125,5 +125,6 @@ if choose == "Home" :
     st.write("กดเพื่อดูข้อมูล")
   if selection ==3 :
       st.image("r.jpeg")
+
 
 
