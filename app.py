@@ -75,7 +75,7 @@ if choose == "Home" :
           "กรอกความเข้มข้น (mg/ml)", value=None, placeholder="..."
       )
       number3 = st.number_input(
-          "กรอกอัตราการบริหารยา (ml/hr)", value=None, placeholder="..."
+          "กรอกอัตราเร็วการบริหารยา (ml/hr)", value=None, placeholder="..."
       )
       
     
@@ -88,7 +88,7 @@ if choose == "Home" :
           st.markdown(
             ":red-badge[⚠️ ขนาดยาเกินกำหนดควรปรึกษาแพทย์]"
           )
-        st.write("อัตราเร็วบริหารยาสูงสุด : ", max , "ml/hr")
+        st.write("อัตราเร็วการบริหารยาสูงสุด : ", max , "ml/hr")
         st.write("ยาที่ต้องจ่ายต่อวัน : ", number2 * number3*24 / 10 , "10mg/ampule")
         
   elif selection == 1 :
@@ -101,7 +101,7 @@ if choose == "Home" :
           "กรอกความเข้มข้น (mcg/mg)", value=None, placeholder="..."
       )
       number6 = st.number_input(
-          "กรอกอัตราการบริหารยา (ml/hr)", value=None, placeholder="..."
+          "กรอกอัตราเร็วการบริหารยา (ml/hr)", value=None, placeholder="..."
       )
 
 
@@ -114,7 +114,7 @@ if choose == "Home" :
           st.markdown(
             ":red-badge[⚠️ ขนาดยาเกินกำหนดควรปรึกษาแพทย์]"
           )
-        st.write("อัตราเร็วบริหารยาสูงสุด : ", max , "ml/hr")
+        st.write("อัตราเร็วการบริหารยาสูงสุด : ", max , "ml/hr")
         st.write("ยาที่ต้องจ่ายต่อวัน : ", number5 * number6*24 / 500 , "500 mcg/ampule")
         st.write("ยาที่ต้องจ่ายต่อวัน : ", number5 * number6*24 / 100 , "100 mcg/ampule")
   if selection == 2:
@@ -125,3 +125,4 @@ if choose == "Home" :
     st.write("กดเพื่อดูข้อมูล")
   if selection ==3 :
       st.image("r.jpeg")
+
