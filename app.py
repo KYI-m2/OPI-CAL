@@ -30,7 +30,7 @@ if choose == "Home" :
       if r.status_code !=200: 
           return None 
       return r.json()
-    lottie_hello = load_lottieurl("https://lottie.host/2cf65467-1261-4054-b579-80d34a87e0d4/gdPBlurvbp.json")
+    lottie_hello = load_lottieurl("https://lottie.host/ad42cd73-5b45-489e-926b-430e3360f365/Bhm0HXK9It.json")
     st_lottie(
       lottie_hello,
       height=150,  # Set the desired height in pixels
@@ -162,6 +162,7 @@ if choose == "How to use" :
 
 if choose == "Reference" :
   st.image("ref.jpeg")
+
 
 
 
