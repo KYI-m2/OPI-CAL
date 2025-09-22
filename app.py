@@ -68,9 +68,9 @@ if choose == "Home" :
   if selection == 0:
     with st.form("my_form"):
       st.write("Morphine Calculator")
-      st.write(" ขนาดยาสำหรับระงับปวดในผู้ป่วยที่ใช้เครื่องช่วยหายใจ (Jacobi et al., 2002)
-  Intermittent dosage 0.01 to 0.15 mg/kg IV every 1 to 2 hours
-  Continuous infusion 0.07 to 0.5 mg/kg/hr IV")
+      st.write("ขนาดยาสำหรับระงับปวดในผู้ป่วยที่ใช้เครื่องช่วยหายใจ (Jacobi et al., 2002)")
+  st.write("Intermittent dosage 0.01 to 0.15 mg/kg IV every 1 to 2 hours")
+  st.write("Continuous infusion 0.07 to 0.5 mg/kg/hr IV")
       number1 = st.number_input(
           "กรอกน้ำหนักผู้ป่วย (kg)", value=None, placeholder="..."
       )
@@ -97,8 +97,8 @@ if choose == "Home" :
   elif selection == 1 :
     with st.form("my_form"):
       st.write("Fentanyl Calculator")
-      st.write("ขนาดยาสำหรับระงับปวดในผู้ป่วยที่ใช้เครื่องช่วยหายใจ (Barr et al., 2013)
-  ขนาดยา: Intermittent dosage 0.35 to 0.5 mcg/kg IV every 0.5 to 1 hour
+      st.write("ขนาดยาสำหรับระงับปวดในผู้ป่วยที่ใช้เครื่องช่วยหายใจ (Barr et al., 2013)")
+      st.write("ขนาดยา: Intermittent dosage 0.35 to 0.5 mcg/kg IV every 0.5 to 1 hour
           Continuous infusion 0.7 to 10 mcg/kg/hr IV")
       number4 = st.number_input(
           "กรอกน้ำหนักผู้ป่วย (kg)", value=None, placeholder="..."
@@ -171,6 +171,7 @@ if choose == "How to use" :
 
 if choose == "Reference" :
   st.image("ref.jpeg")
+
 
 
 
