@@ -17,7 +17,7 @@ with st.sidebar :
   size="large", # Options: "small", "medium", "large"
   )
   choose = option_menu(
-    "My Hospital",
+    "OPI-CAL",
     ["Home","Introduction"],
     icons = ["book","envelope"]
   )
@@ -125,4 +125,5 @@ if choose == "Home" :
     st.write("กดเพื่อดูข้อมูล")
   if selection ==3 :
       st.image("r.jpeg")
+
 
