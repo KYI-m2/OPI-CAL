@@ -164,14 +164,15 @@ if choose == "Introduction" :
 
 
 if choose == "How to use" :  
-  st.image("1.jpg")
-  st.image("2.jpg")
-  st.image("3.jpg")
-  st.image("4.jpg")
-  st.image("5.jpg")
+  st.image("1.png")
+  st.image("2.png")
+  st.image("3.png")
+  st.image("4.png")
+  st.image("5.png")
 
 if choose == "Reference" :
   st.image("ref.jpeg")
+
 
 
 
