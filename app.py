@@ -98,8 +98,8 @@ if choose == "Home" :
     with st.form("my_form"):
       st.write("Fentanyl Calculator")
       st.write("ขนาดยาสำหรับระงับปวดในผู้ป่วยที่ใช้เครื่องช่วยหายใจ (Barr et al., 2013)")
-      st.write("ขนาดยา: Intermittent dosage 0.35 to 0.5 mcg/kg IV every 0.5 to 1 hour
-          Continuous infusion 0.7 to 10 mcg/kg/hr IV")
+      st.write("ขนาดยา: Intermittent dosage 0.35 to 0.5 mcg/kg IV every 0.5 to 1 hour")
+      st.write("Continuous infusion 0.7 to 10 mcg/kg/hr IV")
       number4 = st.number_input(
           "กรอกน้ำหนักผู้ป่วย (kg)", value=None, placeholder="..."
       )
@@ -171,6 +171,7 @@ if choose == "How to use" :
 
 if choose == "Reference" :
   st.image("ref.jpeg")
+
 
 
 
