@@ -69,8 +69,8 @@ if choose == "Home" :
     with st.form("my_form"):
       st.write("Morphine Calculator")
       st.write("ขนาดยาสำหรับระงับปวดในผู้ป่วยที่ใช้เครื่องช่วยหายใจ (Jacobi et al., 2002)")
-  st.write("Intermittent dosage 0.01 to 0.15 mg/kg IV every 1 to 2 hours")
-  st.write("Continuous infusion 0.07 to 0.5 mg/kg/hr IV")
+      st.write("Intermittent dosage 0.01 to 0.15 mg/kg IV every 1 to 2 hours")
+      st.write("Continuous infusion 0.07 to 0.5 mg/kg/hr IV")
       number1 = st.number_input(
           "กรอกน้ำหนักผู้ป่วย (kg)", value=None, placeholder="..."
       )
@@ -171,6 +171,7 @@ if choose == "How to use" :
 
 if choose == "Reference" :
   st.image("ref.jpeg")
+
 
 
 
