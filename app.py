@@ -84,8 +84,8 @@ if choose == "Home" :
     
       submit = st.form_submit_button("Submit")
       if submit:
-        dose = number2 * number3 / number1
-        max = 0.5 * number1 / number2
+        dose = number2*number3/number1
+        max = 0.5 * number1/number2
         st.write("ขนาดยา : ", dose , "mg/kg/hr" )
         if dose > 5 :
           st.markdown(
@@ -172,6 +172,7 @@ if choose == "How to use" :
 
 if choose == "Reference" :
   st.image("ref.jpeg")
+
 
 
 
