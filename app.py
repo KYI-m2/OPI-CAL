@@ -67,7 +67,7 @@ if choose == "Home" :
     3: "การติดตามความปลอดภัยเเละยาต้านพิษ"
   }
   selection = st.pills(
-    "Selection",
+    "โปรดเลือก",
     options=option_map.keys(),
     format_func=lambda option: option_map[option],
     selection_mode="single",
@@ -139,7 +139,7 @@ if choose == "Home" :
     1: "Fentanyl",
 }
     select = st.segmented_control(
-        "Tool",
+        "",
         options=option_map.keys(),
         format_func=lambda option: option_map[option],
         selection_mode="single",
@@ -293,6 +293,7 @@ if choose == "Survey" :
           st.success("บันทึกข้อมูลสำเร็จ!")
       else:
           st.error(f"เกิดข้อผิดพลาด: {response.text}")
+
 
 
 
