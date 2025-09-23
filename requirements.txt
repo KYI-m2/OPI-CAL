@@ -1,3 +1,15 @@
 streamlit
 streamlit_option_menu
 streamlit_lottie
+streamlit-webrtc
+Pillow
+numpy
+pandas
+keras
+tensorflow
+openpyxl
+css
+javascript
+streamlit-extras
+gspread
+oauth2client
