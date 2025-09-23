@@ -112,7 +112,7 @@ if choose == "Home" :
           "กรอกน้ำหนักผู้ป่วย (kg)", value=None, placeholder="..."
       )
       number5 = st.number_input(
-          "กรอกความเข้มข้นของยา (mcg/mg)", value=None, placeholder="..."
+          "กรอกความเข้มข้นของยา (mcg/ml)", value=None, placeholder="..."
       )
       number6 = st.number_input(
           "กรอกอัตราเร็วการบริหารยาที่เเพทย์สั่ง (ml/hr)", value=None, placeholder="..."
@@ -293,6 +293,7 @@ if choose == "Survey" :
           st.success("บันทึกข้อมูลสำเร็จ!")
       else:
           st.error(f"เกิดข้อผิดพลาด: {response.text}")
+
 
 
 
