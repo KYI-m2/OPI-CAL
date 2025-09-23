@@ -160,7 +160,7 @@ if choose == "Introduction" :
   st.badge("รพ.นพรัตนราชธานี")
   st.divider()
   st.header("แนะนำสมาชิก")
-  st.image("aoon.jpg", width=200)
+  st.image("IMG_7173.jpeg", width=200)
   st.markdown("ด.ญ. กานต์ปภา ประจิตร ม.3/3 เลขที่ 21 (หัวหน้ากลุ่ม)")
   
   st.divider()
@@ -293,6 +293,7 @@ if choose == "Survey" :
           st.success("บันทึกข้อมูลสำเร็จ!")
       else:
           st.error(f"เกิดข้อผิดพลาด: {response.text}")
+
 
 
 
