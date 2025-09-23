@@ -133,105 +133,6 @@ if choose == "Home" :
   if selection ==3 :
       st.image("r.jpeg")
 
-first = st.text_input("First name")
-last = st.text_input("Last name")
-
-one = st.selectbox("ระดับความพึงพอใจด้านความชัดเจนของเนื้อหา",
-                   ["5", "4", "3", "2", "1"])
-if one == "5":
-    one = 5
-elif one == "4":
-    one = 4
-elif one == "3":
-    one = 3
-elif one == "2":
-    one = 2
-else:
-    one = 1
-
-two = st.selectbox("ระดับความพึงพอใจด้านการคำนวณได้อย่างถูกต้องแม่นยำ",
-                   ["5", "4", "3", "2", "1"])
-if two == "5":
-    two = 5
-elif two == "4":
-    two = 4
-elif two == "3":
-    two = 3
-elif two == "2":
-    two = 2
-else:
-    two = 1
-
-three = st.selectbox("ระดับความพึงพอใจด้านเคุณค่าในการใช้ประโยชน์ของเนื้อหา",
-                     ["5", "4", "3", "2", "1"])
-if three == "5":
-    three = 5
-elif three == "4":
-    three = 4
-elif three == "3":
-    three = 3
-elif three == "2":
-    three = 2
-else:
-    three = 1
-
-four = st.selectbox("ระดับความพึงพอใจด้านความรวดเร็วของการแสดงผล",
-                    ["5", "4", "3", "2", "1"])
-if four == "5":
-    four = 5
-elif four == "4":
-    four = 4
-elif four == "3":
-    four = 3
-elif four == "2":
-    four = 2
-else:
-    four = 1
-
-five = st.selectbox("ระดับความพึงพอใจด้านความสะดวกในการใช้งาน",
-                    ["5", "4", "3", "2", "1"])
-if five == "5":
-    five = 5
-elif five == "4":
-    five = 4
-elif five == "3":
-    five = 3
-elif five == "2":
-    five = 2
-else:
-    five = 1
-
-mean = (one + two + three + four + five) / 5
-
-if mean >= 1 and mean <= 1.50:
-    satisfaction = "น้อยที่สุด"
-elif mean >= 1.51 and mean <= 2.50:
-    satisfaction = "น้อย"
-elif mean >= 2.51 and mean <= 3.50:
-    satisfaction = "ปานกลาง"
-elif mean >= 3.51 and mean <= 4.50:
-    satisfaction = "มาก"
-elif mean >= 4.51 and mean <= 5:
-    satisfaction = "มากที่สุด"
-else:
-    satisfaction = "ข้อมูลผิดพลาด"
-
-st.write(first)
-st.write(last)
-st.write(mean)
-st.write(satisfaction)
-
-df_1 = pd.read_excel("output.xlsx", index_col=0)
-st.dataframe(df_1)
-st.write(len(df_1))
-df_1.loc[len(df_1), 'ชื่อจริง'] = first
-df_1.loc[len(df_1), 'นามสกุล'] = last
-df_1.loc[len(df_1), 'ค่าความพึงพอใจ'] = mean
-df_1.loc[len(df_1), 'ระดับความพึงพอใจ'] = satisfaction
-
-st.dataframe(df_1)
-
-df_1.to_excel("output.xlsx")
 
 if choose == "Introduction" :
   st.title("วัตถุประสงค์ของเว็บเเอปพลิเคชัน")
@@ -273,6 +174,7 @@ if choose == "How to use" :
 
 if choose == "Reference" :
   st.image("ref.jpeg")
+
 
 
 
