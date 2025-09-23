@@ -94,7 +94,7 @@ if choose == "Home" :
         dose = number2*number3/number1
         max = 0.5 * number1/number2
         st.write("ขนาดยา : ", dose , "mg/kg/hr" )
-        if dose > 5 :
+        if dose > 0.5 :
           st.markdown(
             ":red-badge[⚠️ ขนาดยาเกินกำหนดควรปรึกษาแพทย์]"
           )
@@ -123,7 +123,7 @@ if choose == "Home" :
         dose = number5 * number6 / number4
         max = 10 * number4 / number5
         st.write("ขนาดยา : ", dose , "mcg/kg/hr" )
-        if dose > 5 :
+        if dose > 10 :
           st.markdown(
             ":red-badge[⚠️ ขนาดยาเกินกำหนดควรปรึกษาแพทย์]"
           )
@@ -281,6 +281,7 @@ if choose == "Survey" :
           st.success("บันทึกข้อมูลสำเร็จ!")
       else:
           st.error(f"เกิดข้อผิดพลาด: {response.text}")
+
 
 
 
