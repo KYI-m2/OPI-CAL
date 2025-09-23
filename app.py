@@ -91,7 +91,7 @@ if choose == "Home" :
     
       submit = st.form_submit_button("Submit")
       if submit:
-        dose = number2*number3/number1
+        dose = f"{number2*number3/number1:.3f}"
         max = 0.5 * number1/number2
         st.write("ขนาดยา : ", dose , "mg/kg/hr" )
         if dose > 0.5 :
@@ -120,7 +120,7 @@ if choose == "Home" :
 
       submit = st.form_submit_button("Submit")
       if submit:
-        dose = number5 * number6 / number4
+        dose = f"{number5 * number6 / number4:.3f}"
         max = 10 * number4 / number5
         st.write("ขนาดยา : ", dose , "mcg/kg/hr" )
         if dose > 10 :
@@ -132,9 +132,19 @@ if choose == "Home" :
         st.write("หรือ")
         st.write("ปริมาณยาที่ต้องจ่ายต่อวัน (100 mcg/ampule): ", number5 * number6*24 / 100 ,"ampule")
   if selection == 2:
-    if st.button("Morphine"):
+    option_map = {
+    0: "Morphine",
+    1: "Fentanyl",
+}
+selection = st.segmented_control(
+    "Tool",
+    options=option_map.keys(),
+    format_func=lambda option: option_map[option],
+    selection_mode="single",
+)
+    if selection == "Morphine":
        st.image("IMG_1143.jpeg")
-    if st.button("Fentanyl"):
+    if selection == "Fentanyl":
        st.image("IMG_1144 (2).jpeg")
     st.write("กดเพื่อดูข้อมูล")
   if selection ==3 :
@@ -281,6 +291,7 @@ if choose == "Survey" :
           st.success("บันทึกข้อมูลสำเร็จ!")
       else:
           st.error(f"เกิดข้อผิดพลาด: {response.text}")
+
 
 
 
