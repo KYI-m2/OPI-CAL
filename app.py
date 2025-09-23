@@ -18,7 +18,7 @@ with st.sidebar :
   )
   choose = option_menu(
     "OPI-CAL",
-    ["Home","Introduction", "How to use", "Reference"],
+    ["Home","Introduction", "How to use", "Reference","Survey"],
     icons = ["book","envelope"]
   )
 
@@ -174,6 +174,8 @@ if choose == "How to use" :
 
 if choose == "Reference" :
   st.image("ref.jpeg")
+if choose == "Survey" :
+  st.write("sybau")
 
 
 
