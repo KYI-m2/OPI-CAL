@@ -8,7 +8,14 @@ from streamlit_lottie import st_lottie
 import json
 import requests
 import streamlit_lottie
-from streamlit_lottie import st_lottie
+import streamlit.components.v1 as html
+import io 
+from pathlib import Path
+import base64
+import openpyxl
+from streamlit_webrtc import webrtc_streamer
+import gspread
+from oauth2client.service_account import ServiceAccountCredentials
 
 
 with st.sidebar :
@@ -274,6 +281,7 @@ if choose == "Survey" :
   st.dataframe(df_1)
 
   df_1.to_excel("output.xlsx")
+
 
 
 
