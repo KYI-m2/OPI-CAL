@@ -105,7 +105,7 @@ if choose == "Home" :
     with st.form("my_form"):
       st.write("Fentanyl Calculator")
       st.write("ขนาดยาสำหรับระงับปวดในผู้ป่วยที่ใช้เครื่องช่วยหายใจ (Barr et al., 2013)")
-      st.write("ยา: Intermittent dosage 0.35 to 0.5 mcg/kg IV every 0.5 to 1 hour")
+      st.write("Intermittent dosage 0.35 to 0.5 mcg/kg IV every 0.5 to 1 hour")
       st.write("Continuous infusion 0.7 to 10 mcg/kg/hr IV")
       number4 = st.number_input(
           "กรอกน้ำหนักผู้ป่วย (kg)", value=None, placeholder="..."
@@ -271,12 +271,6 @@ if choose == "Survey" :
      satisfaction = "มากที่สุด"
     else:
      satisfaction = "ข้อมูลผิดพลาด"
-    
-    st.write(first)
-    st.write(last)
-    st.write(mean)
-    st.write(satisfaction)
-    
     submitted = st.form_submit_button("ส่งข้อมูล")
     if submitted:
       # ส่งข้อมูลไปยัง SheetDB
@@ -287,6 +281,7 @@ if choose == "Survey" :
           st.success("บันทึกข้อมูลสำเร็จ!")
       else:
           st.error(f"เกิดข้อผิดพลาด: {response.text}")
+
 
 
 
