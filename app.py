@@ -136,12 +136,12 @@ if choose == "Home" :
     0: "Morphine",
     1: "Fentanyl",
 }
-selection = st.segmented_control(
-    "Tool",
-    options=option_map.keys(),
-    format_func=lambda option: option_map[option],
-    selection_mode="single",
-)
+    selection = st.segmented_control(
+        "Tool",
+        options=option_map.keys(),
+        format_func=lambda option: option_map[option],
+        selection_mode="single",
+    )
     if selection == "Morphine":
        st.image("IMG_1143.jpeg")
     if selection == "Fentanyl":
@@ -291,6 +291,7 @@ if choose == "Survey" :
           st.success("บันทึกข้อมูลสำเร็จ!")
       else:
           st.error(f"เกิดข้อผิดพลาด: {response.text}")
+
 
 
 
