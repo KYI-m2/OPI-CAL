@@ -92,9 +92,10 @@ if choose == "Home" :
       submit = st.form_submit_button("Submit")
       if submit:
         dose = f"{number2*number3/number1:.3f}"
+        doses = number2*number3/number1
         max = 0.5 * number1/number2
         st.write("ขนาดยา : ", dose , "mg/kg/hr" )
-        if dose > 0.5 :
+        if doses > 0.5 :
           st.markdown(
             ":red-badge[⚠️ ขนาดยาเกินกำหนดควรปรึกษาแพทย์]"
           )
@@ -121,9 +122,10 @@ if choose == "Home" :
       submit = st.form_submit_button("Submit")
       if submit:
         dose = f"{number5 * number6 / number4:.3f}"
+        doses = number5 * number6 / number4"
         max = 10 * number4 / number5
         st.write("ขนาดยา : ", dose , "mcg/kg/hr" )
-        if dose > 10 :
+        if doses > 10 :
           st.markdown(
             ":red-badge[⚠️ ขนาดยาเกินกำหนดควรปรึกษาแพทย์]"
           )
@@ -291,6 +293,7 @@ if choose == "Survey" :
           st.success("บันทึกข้อมูลสำเร็จ!")
       else:
           st.error(f"เกิดข้อผิดพลาด: {response.text}")
+
 
 
 
