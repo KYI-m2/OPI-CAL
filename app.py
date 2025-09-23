@@ -122,7 +122,7 @@ if choose == "Home" :
       submit = st.form_submit_button("Submit")
       if submit:
         dose = f"{number5 * number6 / number4:.3f}"
-        doses = number5 * number6 / number4"
+        doses = number5 * number6 / number4
         max = 10 * number4 / number5
         st.write("ขนาดยา : ", dose , "mcg/kg/hr" )
         if doses > 10 :
@@ -293,6 +293,7 @@ if choose == "Survey" :
           st.success("บันทึกข้อมูลสำเร็จ!")
       else:
           st.error(f"เกิดข้อผิดพลาด: {response.text}")
+
 
 
 
