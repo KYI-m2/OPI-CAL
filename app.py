@@ -286,13 +286,14 @@ if choose == "Survey" :
     submitted = st.form_submit_button("ส่งข้อมูล")
     if submitted:
       # ส่งข้อมูลไปยัง SheetDB
-      data = {"data": [{"First name": first, "Last name": last, "Mean": mean, "Satisfaction": satisfaction }]}
+      data = {"data": [{"First name": first, "Last name": last, "Mean": mean, "Satisfaction": satisfaction ,"ระดับความพึงพอใจด้านความชัดเจนของเนื้อหา": one, "ระดับความพึงพอใจด้านการคำนวณได้อย่างถูกต้องแม่นยำ": two, "ระดับความพึงพอใจด้านเคุณค่าในการใช้ประโยชน์ของเนื้อหา": three, "ระดับความพึงพอใจด้านความรวดเร็วของการแสดงผล": four, "ระดับความพึงพอใจด้านความสะดวกในการใช้งาน": five  }]}
       response = requests.post(SHEETDB_URL, json=data)
   
       if response.status_code == 201:
           st.success("บันทึกข้อมูลสำเร็จ!")
       else:
           st.error(f"เกิดข้อผิดพลาด: {response.text}")
+
 
 
 
