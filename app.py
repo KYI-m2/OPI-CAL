@@ -130,7 +130,7 @@ if choose == "Home" :
             ":red-badge[⚠️ ขนาดยาเกินกำหนดควรปรึกษาแพทย์]"
           )
         st.write("อัตราเร็วการบริหารยาสูงสุด : ", max , "ml/hr")
-        st.write("ปริมาณยาที่ต้องจ่ายต่อวัน  (500 mcg/ampule) : ", number5 * number6*24 / 500,"amplue" )
+        st.write("ปริมาณยาที่ต้องจ่ายต่อวัน  (500 mcg/ampule) : ", number5 * number6*24 / 500,"ampule" )
         st.write("หรือ")
         st.write("ปริมาณยาที่ต้องจ่ายต่อวัน (100 mcg/ampule): ", number5 * number6*24 / 100 ,"ampule")
   if selection == 2:
@@ -293,6 +293,7 @@ if choose == "Survey" :
           st.success("บันทึกข้อมูลสำเร็จ!")
       else:
           st.error(f"เกิดข้อผิดพลาด: {response.text}")
+
 
 
 
